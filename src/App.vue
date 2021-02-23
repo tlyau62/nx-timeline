@@ -1,32 +1,104 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <NxTimeline>
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        content="test label"
+        :progress="0"
+        placement="top"
+      />
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        content="test label 2"
+        :progress="30"
+        placement="top"
+      />
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        content="test label 2"
+        :progress="60"
+        placement="bottom"
+      />
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="20"
+        content="test label 2"
+        :progress="100"
+        placement="top"
+      />
+    </NxTimeline>
   </div>
 </template>
 
+<script>
+import NxTimeline from "./components/NxTimeline";
+import NxTimelineLabel from "./components/NxTimelineLabel";
+
+export default {
+  components: {
+    NxTimeline,
+    NxTimelineLabel,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+// #progress-bar-wrapper {
+//   height: 100px;
+//   background: lightgray;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+// }
 
-#nav {
-  padding: 30px;
+// #progress-bar {
+//   background: black;
+//   height: 1px;
+//   position: absolute;
+//   width: 100%;
+// }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+// #progress-label {
+//   position: relative;
+//   height: 100%;
+//   width: 1px;
+// }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+// .progress-label-content {
+//   width: 200px;
+//   transform: translate(-50%, 0);
+//   text-align: center;
+// }
+
+// .progress-label-line {
+//   height: 50%;
+//   width: 1px;
+//   background: red;
+//   position: absolute;
+//   top: 0;
+// }
+
+// .top-label {
+//   top: 0;
+//   position: absolute;
+// }
+
+// .top-line {
+//   top: 0;
+// }
+
+// .bottom-label {
+//   bottom: 0;
+//   position: absolute;
+// }
+
+// .bottom-line {
+//   top: 50%;
+// }
 </style>
