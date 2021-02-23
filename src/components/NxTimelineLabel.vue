@@ -2,7 +2,7 @@
   <NxTimelineProgress :progress="progress">
     <div class="nx-timeline-label-wrapper" :style="position">
       <div class="nx-timeline-label" :style="direction">
-        <div class="nx-timeline-label__content">
+        <div class="nx-timeline-label__content" :style="contentPosition">
           {{ content }}
         </div>
         <div class="nx-timeline-label__line" />
@@ -49,10 +49,17 @@ export default {
       const position = {};
 
       position.height = `${this.height}px`;
+      position[this.placement === "top" ? "bottom" : "top"] = `100%`;
+
+      return {
+        ...position,
+      };
+    },
+    contentPosition() {
+      const position = {};
+
       position.left = `${this.offsetX}px`;
-      position[
-        this.placement === "top" ? "bottom" : "top"
-      ] = `calc(100% + ${this.offsetY}px)`;
+      position[this.placement] = `${this.offsetY}px`;
 
       return {
         ...position,
@@ -89,6 +96,7 @@ export default {
   &__content {
     text-align: center;
     width: 200px;
+    position: relative;
   }
 }
 </style>

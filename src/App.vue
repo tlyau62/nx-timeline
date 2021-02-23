@@ -18,6 +18,22 @@
       />
 
       <NxTimelineLabel
+        :offset-x="50"
+        :offset-y="50"
+        content="test label 2.1"
+        :progress="40"
+        placement="top"
+      />
+
+      <NxTimelineLabel
+        :offset-x="-50"
+        :offset-y="30"
+        content="test label 2.2"
+        :progress="50"
+        placement="bottom"
+      />
+
+      <NxTimelineLabel
         :offset-x="0"
         :offset-y="0"
         content="test label 3"
