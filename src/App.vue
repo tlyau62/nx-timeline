@@ -4,7 +4,7 @@
       <NxTimelineLabel
         :offset-x="0"
         :offset-y="0"
-        content="test label"
+        content="test label 1"
         :progress="0"
         placement="top"
       />
@@ -20,15 +20,15 @@
       <NxTimelineLabel
         :offset-x="0"
         :offset-y="0"
-        content="test label 2"
+        content="test label 3"
         :progress="60"
         placement="bottom"
       />
 
       <NxTimelineLabel
         :offset-x="0"
-        :offset-y="20"
-        content="test label 2"
+        :offset-y="0"
+        content="test label 4"
         :progress="100"
         placement="top"
       />
@@ -49,6 +49,9 @@ export default {
 </script>
 
 <style lang="scss">
+#app {
+  margin: 5rem;
+}
 // #progress-bar-wrapper {
 //   height: 100px;
 //   background: lightgray;

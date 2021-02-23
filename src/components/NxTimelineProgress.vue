@@ -1,8 +1,6 @@
 <template>
   <div class="nx-timeline-progress" :style="position">
-    <div class="position-relative">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -27,8 +25,8 @@ export default {
 <style lang="scss" scoped>
 .nx-timeline-progress {
   position: absolute;
-  width: 1px;
-  height: 100%;
+  width: 5px;
+  height: 5px;
   background: black;
 }
 </style>

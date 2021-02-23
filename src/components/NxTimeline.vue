@@ -9,7 +9,7 @@
 .nx-timeline {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 500px;
   position: relative;
 }
 
