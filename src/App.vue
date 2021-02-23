@@ -111,7 +111,7 @@
         :offset-y="0"
         :progress="50"
         placement="top"
-        :height="100"
+        :height="75"
       >
         Today : 2020-10-12
       </NxTimelineLabel>
@@ -120,8 +120,8 @@
         :offset-x="0"
         :offset-y="0"
         :progress="(45 / 60) * 100"
-        placement="bottom"
-        :height="100"
+        placement="bottom-left"
+        :height="75"
       >
         Day 45 : 2020-11-21
       </NxTimelineLabel>
@@ -130,8 +130,8 @@
         :offset-x="0"
         :offset-y="0"
         :progress="100"
-        placement="bottom"
-        :height="100"
+        placement="bottom-left"
+        :height="75"
       >
         Day 60 : 2020-12-03
       </NxTimelineLabel>
