@@ -37,6 +37,10 @@ export default {
       type: Number,
       default: 100,
     },
+    width: {
+      type: Number,
+      default: 100,
+    },
     progress: {
       type: Number,
       default: 0,
@@ -80,6 +84,7 @@ export default {
         position.left = `${this.offsetX}px`;
       }
 
+      position.width = `${this.width}px`;
       position[this.placementSplit.y] = `${this.offsetY}px`;
 
       return {
@@ -116,7 +121,6 @@ export default {
 
   &__content {
     text-align: center;
-    width: 200px;
     position: relative;
   }
 }
