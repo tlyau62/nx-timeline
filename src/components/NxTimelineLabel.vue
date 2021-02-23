@@ -31,6 +31,10 @@ export default {
       type: String,
       default: "",
     },
+    height: {
+      type: Number,
+      default: 100,
+    },
     progress: {
       type: Number,
       default: 0,
@@ -44,6 +48,7 @@ export default {
     position() {
       const position = {};
 
+      position.height = `${this.height}px`;
       position.left = `${this.offsetX}px`;
       position[
         this.placement === "top" ? "bottom" : "top"
@@ -65,7 +70,6 @@ export default {
 
 <style lang="scss" scoped>
 .nx-timeline-label-wrapper {
-  height: 100px;
   width: 100%;
   position: absolute;
 }
