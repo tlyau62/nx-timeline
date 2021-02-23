@@ -50,11 +50,19 @@ export default {
     },
   },
   computed: {
+    placementSplit() {
+      const placement = this.placement.split("-");
+
+      return {
+        x: placement[1],
+        y: placement[0],
+      };
+    },
     position() {
       const position = {};
 
       position.height = `${this.height}px`;
-      position[this.placement === "top" ? "bottom" : "top"] = `100%`;
+      position[this.placementSplit.y === "top" ? "bottom" : "top"] = `100%`;
 
       return {
         ...position,
@@ -63,8 +71,16 @@ export default {
     contentPosition() {
       const position = {};
 
-      position.left = `${this.offsetX}px`;
-      position[this.placement] = `${this.offsetY}px`;
+      if (this.placementSplit.x) {
+        position.position = "absolute";
+        position[
+          this.placementSplit.x === "left" ? "right" : "left"
+        ] = `${this.offsetX}px`;
+      } else {
+        position.left = `${this.offsetX}px`;
+      }
+
+      position[this.placementSplit.y] = `${this.offsetY}px`;
 
       return {
         ...position,
@@ -73,7 +89,7 @@ export default {
     direction() {
       return {
         "flex-direction":
-          this.placement === "bottom" ? "column-reverse" : "column",
+          this.placementSplit.y === "bottom" ? "column-reverse" : "column",
       };
     },
   },
