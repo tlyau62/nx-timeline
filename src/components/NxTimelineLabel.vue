@@ -1,16 +1,19 @@
 <template>
-  <NxTimelineProgress :progress="progress">
-    <div class="nx-timeline-label-wrapper" :style="position">
-      <div class="nx-timeline-label" :style="direction">
-        <div class="nx-timeline-label__content" :style="contentPosition">
-          <slot>
-            {{ content }}
-          </slot>
-        </div>
-        <div class="nx-timeline-label__line" v-if="!hideLine" />
+  <div class="nx-timeline-label-wrapper" :style="position">
+    <div class="nx-timeline-label" :style="direction">
+      <div
+        class="nx-timeline-label__content"
+        v-bind="$attrs"
+        v-on="$listeners"
+        :style="contentPosition"
+      >
+        <slot>
+          {{ content }}
+        </slot>
       </div>
+      <div class="nx-timeline-label__line" v-if="!hideLine" />
     </div>
-  </NxTimelineProgress>
+  </div>
 </template>
 
 <script>
@@ -40,10 +43,6 @@ export default {
     width: {
       type: Number,
       default: 100,
-    },
-    progress: {
-      type: Number,
-      default: 0,
     },
     placement: {
       type: String,
