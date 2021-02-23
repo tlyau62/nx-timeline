@@ -49,6 +49,93 @@
         placement="top"
       />
     </NxTimeline>
+
+    <NxTimeline id="my-progress">
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="0"
+        placement="top"
+        :height="30"
+        hide-line
+      >
+        <i class="fas fa-file-download"></i>
+      </NxTimelineLabel>
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="0"
+        placement="bottom"
+        :height="30"
+        hide-line
+      >
+        <i class="fas fa-file-upload"></i>
+      </NxTimelineLabel>
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="20"
+        placement="top"
+        :height="30"
+        hide-line
+      >
+        <i class="fas fa-file-download"></i>
+      </NxTimelineLabel>
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="25"
+        placement="top"
+        :height="30"
+        hide-line
+      >
+        <i class="fas fa-file-download"></i>
+      </NxTimelineLabel>
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="30"
+        placement="bottom"
+        :height="30"
+        hide-line
+      >
+        <i class="fas fa-file-upload"></i>
+      </NxTimelineLabel>
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="50"
+        placement="top"
+        :height="100"
+      >
+        Today : 2020-10-12
+      </NxTimelineLabel>
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="(45 / 60) * 100"
+        placement="bottom"
+        :height="100"
+      >
+        Day 45 : 2020-11-21
+      </NxTimelineLabel>
+
+      <NxTimelineLabel
+        :offset-x="0"
+        :offset-y="0"
+        :progress="100"
+        placement="bottom"
+        :height="100"
+      >
+        Day 60 : 2020-12-03
+      </NxTimelineLabel>
+    </NxTimeline>
   </div>
 </template>
 
