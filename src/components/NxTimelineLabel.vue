@@ -3,9 +3,11 @@
     <div class="nx-timeline-label-wrapper" :style="position">
       <div class="nx-timeline-label" :style="direction">
         <div class="nx-timeline-label__content" :style="contentPosition">
-          {{ content }}
+          <slot>
+            {{ content }}
+          </slot>
         </div>
-        <div class="nx-timeline-label__line" />
+        <div class="nx-timeline-label__line" v-if="!hideLine" />
       </div>
     </div>
   </NxTimelineProgress>
@@ -42,6 +44,9 @@ export default {
     placement: {
       type: String,
       default: "top",
+    },
+    hideLine: {
+      type: Boolean,
     },
   },
   computed: {
