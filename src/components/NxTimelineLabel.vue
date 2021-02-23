@@ -93,8 +93,8 @@ export default {
   height: 100%;
 
   &__line {
-    background: blue;
-    width: 5px;
+    background: black;
+    width: 1px;
     flex: 1;
   }
 
