@@ -24,30 +24,58 @@ export default {
     NxTimelineProgress,
   },
   props: {
+    /**
+     * Offset X
+     */
     offsetX: {
       type: Number,
       default: 0,
     },
+
+    /**
+     * Offset Y
+     */
     offsetY: {
       type: Number,
       default: 0,
     },
+
+    /**
+     * Plain text content
+     */
     content: {
       type: String,
       default: "",
     },
+
+    /**
+     * Height of the label
+     */
     height: {
       type: Number,
       default: 100,
     },
+
+    /**
+     * Width of the label
+     */
     width: {
       type: Number,
       default: 100,
     },
+
+    /**
+     * Location of the label
+     * avaliable: top-left, top-right, bottom-left, bottom-right
+     */
     placement: {
       type: String,
       default: "top",
     },
+
+    /**
+     * Hide the label indicator line
+     */
     hideLine: {
       type: Boolean,
     },
