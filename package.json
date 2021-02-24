@@ -2,9 +2,11 @@
   "name": "nx-timeline",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/nx-timeline.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "build:module": "vue-cli-service build --target lib"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
