@@ -1,7 +1,6 @@
 {
   "name": "nx-timeline",
   "version": "0.1.0",
-  "private": true,
   "main": "./dist/nx-timeline.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
