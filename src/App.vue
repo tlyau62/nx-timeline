@@ -157,9 +157,9 @@
 </template>
 
 <script>
-import NxTimeline from "./components/NxTimeline";
-import NxTimelineLabel from "./components/NxTimelineLabel";
-import NxTimelineProgress from "./components/NxTimelineProgress";
+import NxTimeline from "./components/nx-timeline/NxTimeline";
+import NxTimelineLabel from "./components/nx-timeline/NxTimelineLabel";
+import NxTimelineProgress from "./components/nx-timeline/NxTimelineProgress";
 
 export default {
   components: {

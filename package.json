@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:module": "vue-cli-service build --target lib"
+    "build:module": "vue-cli-service build --target lib src/components/nx-timeline/nx-timeline.plugin.js --formats umd-min"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
